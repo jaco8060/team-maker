@@ -16,6 +16,9 @@ html {
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 textarea,
@@ -38,4 +41,34 @@ button {
 #teamOutput {
   margin-top: 20px;
   text-align: left;
+}
+/* Additional styles in styles.css */
+#nameList {
+  list-style: none;
+  padding: 0;
+}
+
+#nameList li {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+#nameInput {
+  padding: 1rem;
+  font-size: 1rem;
+  width: 20rem;
+}
+button {
+  width: 10rem;
+}
+.removeBtn {
+  width: 2rem;
+  background-color: transparent;
+  border: solid 1px;
+  border-radius: 10px;
+  margin: 0;
+  padding: 0;
+}
+.clearAll{
+  background-color: red;
 }

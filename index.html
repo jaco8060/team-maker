@@ -9,10 +9,12 @@
   <body>
     <div class="container">
       <h1>Team Maker</h1>
-      <textarea
-        id="namesInput"
-        placeholder="Enter names separated by commas"
-      ></textarea>
+      <input
+        type="text"
+        id="nameInput"
+        placeholder="Enter a name and press Enter"
+      />
+      <button onclick="addNameToList()">Add Name</button>
       <input
         type="number"
         id="teamSize"
@@ -21,6 +23,10 @@
         value="2"
       />
       <button onclick="generateTeams()">Generate Teams</button>
+      <button class="clearAll" onclick="clearAllNames()">
+        Clear All Names
+      </button>
+      <ul id="nameList"></ul>
       <div id="teamOutput"></div>
     </div>
     <script src="script.js"></script>

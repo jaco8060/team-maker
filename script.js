@@ -1,6 +1,39 @@
 // script.js
+document
+  .getElementById("nameInput")
+  .addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      addNameToList();
+    }
+  });
+
+function addNameToList() {
+  const input = document.getElementById("nameInput");
+  const name = input.value.trim();
+  if (name) {
+    const list = document.getElementById("nameList");
+    const listItem = document.createElement("li");
+    listItem.textContent = name;
+
+    const removeBtn = document.createElement("button");
+    removeBtn.textContent = "❌";
+    removeBtn.onclick = function () {
+      list.removeChild(listItem);
+    };
+    removeBtn.classList = "removeBtn";
+    listItem.appendChild(removeBtn);
+
+    list.appendChild(listItem);
+    input.value = ""; // Clear the input box
+  }
+}
+
 function generateTeams() {
-  const names = document.getElementById("namesInput").value.split(",");
+  const listItems = document.querySelectorAll("#nameList li");
+  const names = Array.from(listItems).map((item) =>
+    item.textContent.replace("Remove", "").trim()
+  );
   const teamSize = parseInt(document.getElementById("teamSize").value) || 2;
   const teams = [];
 
@@ -21,4 +54,9 @@ function generateTeams() {
   teams.forEach((team, index) => {
     output.innerHTML += `<p>Team ${index + 1}: ${team.join(", ")}</p>`;
   });
+}
+
+function clearAllNames() {
+  const list = document.getElementById("nameList");
+  list.innerHTML = ""; // Remove all children from the list
 }
