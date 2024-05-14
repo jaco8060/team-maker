@@ -1,0 +1,41 @@
+/* styles.css */
+body,
+html {
+  font-family: Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+  background: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: white;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+textarea,
+input[type="number"],
+button {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+button {
+  cursor: pointer;
+  background: #0056b3;
+  color: white;
+  border: none;
+}
+
+#teamOutput {
+  margin-top: 20px;
+  text-align: left;
+}
