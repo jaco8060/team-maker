@@ -7,9 +7,7 @@ import TeamGenerator from "./components/TeamGenerator";
 
 const App = () => {
   const [names, setNames] = useState([]);
-  const [apiKey, setApiKey] = useState(
-    "RGAPI-95976879-75c7-4641-a801-4f3a89550f8a"
-  );
+  const [apiKey, setApiKey] = useState("");
 
   return (
     <div className="container">
