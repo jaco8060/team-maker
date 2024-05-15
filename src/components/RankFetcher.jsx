@@ -10,7 +10,7 @@ const RankFetcher = ({ apiKey }) => {
     try {
       setError("");
       const accountResponse = await fetch(
-        `http://localhost:5000/riot/account/v1/accounts/by-riot-id/${riotId}/${tagLine}?api_key=${apiKey}`
+        `https://jaco8060.github.io/team-maker/riot/account/v1/accounts/by-riot-id/${riotId}/${tagLine}?api_key=${apiKey}`
       );
       if (!accountResponse.ok) throw new Error("Failed to fetch account");
 
@@ -18,7 +18,7 @@ const RankFetcher = ({ apiKey }) => {
       const encryptedPUUID = accountData.puuid;
 
       const summonerResponse = await fetch(
-        `http://localhost:5000/lol/summoner/v4/summoners/by-puuid/${encryptedPUUID}?api_key=${apiKey}`
+        `https://jaco8060.github.io/team-maker/lol/summoner/v4/summoners/by-puuid/${encryptedPUUID}?api_key=${apiKey}`
       );
       if (!summonerResponse.ok) throw new Error("Failed to fetch summoner");
 
@@ -26,7 +26,7 @@ const RankFetcher = ({ apiKey }) => {
       const encryptedSummonerId = summonerData.id;
 
       const rankResponse = await fetch(
-        `http://localhost:5000/lol/league/v4/entries/by-summoner/${encryptedSummonerId}?api_key=${apiKey}`
+        `https://jaco8060.github.io/team-maker/lol/league/v4/entries/by-summoner/${encryptedSummonerId}?api_key=${apiKey}`
       );
       if (!rankResponse.ok) throw new Error("Failed to fetch rank");
 
