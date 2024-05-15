@@ -2,9 +2,15 @@ const express = require("express");
 const axios = require("axios");
 const cors = require("cors");
 const app = express();
-const port = process.env.PORT || 3000; // Vercel provides the PORT variable
+const port = 3000; // Vercel provides the PORT variable
 
-app.use(cors());
+const corsOptions = {
+  origin: "https://jaco8060.github.io", // Allow only your frontend URL
+  optionsSuccessStatus: 200, // For legacy browser support
+};
+
+app.use(cors(corsOptions));
+
 app.use(express.json());
 
 app.get(
