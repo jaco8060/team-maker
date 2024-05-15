@@ -1,4 +1,3 @@
-/* styles.css */
 body,
 html {
   font-family: Arial, sans-serif;
@@ -21,8 +20,7 @@ html {
   align-items: center;
 }
 
-textarea,
-input[type="number"],
+input,
 button {
   width: 80%;
   padding: 10px;
@@ -38,30 +36,17 @@ button {
   border: none;
 }
 
-#teamOutput {
-  margin-top: 20px;
-  text-align: left;
-}
-/* Additional styles in styles.css */
-#nameList {
+ul {
   list-style: none;
   padding: 0;
 }
 
-#nameList li {
+li {
   padding: 8px;
   border-bottom: 1px solid #ddd;
 }
 
-#nameInput {
-  padding: 1rem;
-  font-size: 1rem;
-  width: 20rem;
-}
-button {
-  width: 10rem;
-}
-.removeBtn {
+button.removeBtn {
   width: 2rem;
   background-color: transparent;
   border: solid 1px;
@@ -69,6 +54,16 @@ button {
   margin: 0;
   padding: 0;
 }
-.clearAll{
+
+.clearAll {
   background-color: red;
+}
+
+#rankOutput {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.apiInput {
+  width: 20rem;
 }

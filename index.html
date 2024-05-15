@@ -1,34 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Team Maker App</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>Vite + React</title>
   </head>
   <body>
-    <div class="container">
-      <h1>Team Maker</h1>
-      <input
-        type="text"
-        id="nameInput"
-        placeholder="Enter a name and press Enter"
-      />
-      <button onclick="addNameToList()">Add Name</button>
-      <input
-        type="number"
-        id="teamSize"
-        placeholder="Team size (default 2)"
-        min="2"
-        value="2"
-      />
-      <button onclick="generateTeams()">Generate Teams</button>
-      <button class="clearAll" onclick="clearAllNames()">
-        Clear All Names
-      </button>
-      <ul id="nameList"></ul>
-      <div id="teamOutput"></div>
-    </div>
-    <script src="script.js"></script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
